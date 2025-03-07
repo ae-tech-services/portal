@@ -79,31 +79,3 @@ document.addEventListener("DOMContentLoaded", () => {
     fetchExpiration(); // Initial load
     setInterval(fetchExpiration, 1000); // Update every second
 });
-
-
-
-
-
-
-
-
-
-
-
-document.addEventListener("DOMContentLoaded", () => {
-    setTimeout(() => {
-        let statusElement = document.getElementById("status");
-        let pauseBtn = document.getElementById("pauseBtn");
-
-        if (statusElement && pauseBtn) {
-            let statusText = statusElement.textContent.trim().toLowerCase();
-
-            if (statusText !== "disconnected") {
-                pauseBtn.click(); // First click
-                setTimeout(() => pauseBtn.click(), 500); // Second click after 500ms
-            } else {
-                console.log("Status is 'Disconnected', skipping button clicks.");
-            }
-        }
-    }, 1000); // Wait 1 second after page load before checking and clicking
-});
