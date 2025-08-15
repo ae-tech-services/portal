@@ -15,21 +15,21 @@ document.addEventListener("DOMContentLoaded", function () {
             // Update UI based on status value
             switch (status) {
                 case "Connected":
-                    statusImg.src = "assets/IMG/connected.png";
+                    statusImg.src = "https://ae-tech-services.github.io/portal/assets/IMG/connected.png";
                     statusImg.classList.remove("blink"); // Remove blinking effect
                     statusElement.style.color = "rgb(21, 214, 79)"; // Set text color to green
                     if (vendoAlert) vendoAlert.style.marginBottom = ""; // Optional styling for vendoAlert
                     break;
 
                 case "Disconnected":
-                    statusImg.src = "assets/IMG/disconnected.png";
+                    statusImg.src = "https://ae-tech-services.github.io/portal/assets/IMG/disconnected.png";
                     statusImg.classList.remove("blink"); // Remove blinking effect
                     statusElement.style.color = "red"; // Set text color to red
                     if (vendoAlert) vendoAlert.style.marginBottom = ""; // Optional styling for vendoAlert
                     break;
 
                 case "Time Paused":
-                    statusImg.src = "assets/IMG/pause.png";
+                    statusImg.src = "https://ae-tech-services.github.io/portal/assets/IMG/pause.png";
                     statusImg.classList.add("blink"); // Add blinking effect
                     statusElement.style.color = "grey"; // Set text color to grey
                     if (vendoAlert) vendoAlert.style.marginBottom = ""; // Optional styling for vendoAlert
@@ -136,4 +136,5 @@ function updateNewTimer() {
 updateNewTimer();
 
 // Optionally, set an interval if the timer is dynamic
+
 setInterval(updateNewTimer, 1); // Update every second
